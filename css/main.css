@@ -55,7 +55,7 @@ body {
   float: left;
   position: relative;
   top: 166px;
-  left: -126px;
+  left: -126px; /*supposed to be set to 520px or 32.5rem*/
   z-index: 10;
 }
 
