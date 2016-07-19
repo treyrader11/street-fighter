@@ -66,3 +66,29 @@ body {
   z-index: 10;
 }
 
+.instructions-box {
+	
+	width: 487px;
+	height: 376px;
+	font-size: 20px;
+	position: absolute;
+	top: 18px;
+	left: 482px;
+}
+
+.instructions-box .content{
+	padding: 19px;
+}
+
+/*#first-line,
+#second-line*/
+.line1,
+.line2 {
+	float: left;
+	padding: 0px;
+	text-align: center;
+	font-size: 30px;
+	font-weight: 700;
+}
+
+ 

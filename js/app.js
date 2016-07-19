@@ -1,9 +1,22 @@
 
 
+
+
+
+
 $(document).ready(function() {
+	//$('#first-line').fadeTo("slow", 1);
+	$('.content').addClass('line1').fadeTo("slow", 1).text("Put the mouse on Ryu to get him ready for combat!");
+});
 	$('.ryu').mouseenter(function() {
 		$('.ryu-still').hide();
-		$('.ryu-ready').show();;
+		$('.ryu-ready').show();
+		
+		$('.line1').fadeTo("slow", 0, function() {
+			$(this).hide();
+		})
+		$('.content').addClass('line2').fadeTo("slow", 1).text("Ok, Let's begin...");
+
 	})
 	.mouseleave(function() {
     	$('.ryu-ready').hide();
@@ -45,7 +58,9 @@ $(document).ready(function() {
         }
     }) 
 	playTakeFive();
-});
+
+
+
 
 function playHadouken() {
 	$('#hadouken-sound')[0].volume = 0.5;
