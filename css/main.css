@@ -1,6 +1,6 @@
-* {
+/** {
   outline: red 1px solid;
-}
+}*/
 
 body {
 	background: black;
@@ -22,13 +22,20 @@ body {
 	height: 30.875rem;
 }
 
-.ryu-ready, .ryu-still, .ryu-throwing {
+.ryu-ready, 
+.ryu-still, 
+.ryu-throwing,
+.ryu-cool {
 	width: 41.1875rem;
 	height: 30.875rem;
 }
 
-.ryu-ready, .ryu-throwing {
+.ryu-ready, .ryu-throwing, .ryu-cool {
 	display: none;
+}
+
+.ryu-cool {
+	background-image: url("../images/ryu-cool.gif");
 }
 
 .ryu-ready {
