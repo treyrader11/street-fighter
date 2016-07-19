@@ -25,7 +25,8 @@ $(document).ready(function() {
 	.mouseup(function() {
 		$('.ryu-throwing').hide();
 		$('.ryu-ready').show();
-	});
+	})
+	playTakeFive();
 });
 
 
@@ -40,9 +41,8 @@ function playHadouken() {
 
 
  $(document).on("keydown", function(e){
-       var code = e.keyCode;
+       var code = e.keyCode; /*not entirely sure how this code is implemented*/
         if(code == 88){
-        	//playMusic();
          	$('.ryu-ready').hide();
          	$('.ryu-still').hide();
          	$('.ryu-cool').show();   
@@ -52,14 +52,15 @@ function playHadouken() {
   $(document).on("keyup", function(e){
        var code = e.keyCode;
         if(code == 88){
+        	$('#take-five').hide();
          	$('.ryu-cool').hide();
          	$('.ryu-ready').show();
         // $('.ryu-still').show();   
         }
     });
 
-function playMusic() {
-	$('#my-sound')[0].volume = 0.5;
-	$('#my-sound')[0].load();
-	$('#my-sound')[0].play();
+function playTakeFive() {
+	$('#take-five')[0].volume = 0.5;
+	$('#take-five')[0].load();
+	$('#take-five')[0].play();
 }
