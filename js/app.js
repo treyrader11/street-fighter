@@ -26,30 +26,16 @@ $(document).ready(function() {
 		$('.ryu-throwing').hide();
 		$('.ryu-ready').show();
 	})
-	playTakeFive();
-});
 
-
-
-
-function playHadouken() {
-	$('#hadouken-sound')[0].volume = 0.5;
-	$('#hadouken-sound')[0].load();
-	$('#hadouken-sound')[0].play();
-}
-
-
-
- $(document).on("keydown", function(e){
+	$(this).keydown(function(e){
        var code = e.keyCode; /*not entirely sure how this code is implemented*/
         if(code == 88){
          	$('.ryu-ready').hide();
          	$('.ryu-still').hide();
          	$('.ryu-cool').show();   
         }
-    });
-
-  $(document).on("keyup", function(e){
+    })
+	$(this).keyup(function(e){
        var code = e.keyCode;
         if(code == 88){
         	$('#take-five').hide();
@@ -57,7 +43,15 @@ function playHadouken() {
          	$('.ryu-ready').show();
         // $('.ryu-still').show();   
         }
-    });
+    }) 
+	playTakeFive();
+});
+
+function playHadouken() {
+	$('#hadouken-sound')[0].volume = 0.5;
+	$('#hadouken-sound')[0].load();
+	$('#hadouken-sound')[0].play();
+}
 
 function playTakeFive() {
 	$('#take-five')[0].volume = 0.5;
