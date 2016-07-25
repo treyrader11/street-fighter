@@ -78,6 +78,22 @@ body {
 
 .instructions-box .content{
 	padding: 19px;
+	border: solid 1px transparent;
+}
+
+.content > li {
+	list-style-type: none;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 700;
+	font-size: 30px;
+	border: solid 1px transparent;
+	margin: 13px 0px 0px 0px;
+}
+
+#instruction-1,
+#instruction-2,
+#instruction-3 {
+	display: none;
 }
 
 /*#first-line,
@@ -85,10 +101,10 @@ body {
 .line1,
 .line2 {
 	float: left;
-	padding: 0px;
 	text-align: center;
 	font-size: 30px;
 	font-weight: 700;
+	font-family: 'Open Sans Condensed', sans-serif;
 }
 
  
